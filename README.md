@@ -25,6 +25,6 @@ When deployed to Vercel at [https://my-app-2-xi.vercel.app/123](https://my-app-2
 
 Interestingly, the network tab shows cache-related headers indicating the content should be cached:
 
-![Network Headers](https://user-images.githubusercontent.com/your-username/headers-screenshot.png)
+![Network Headers](headers-screenshot.png)
 
 Despite these headers suggesting caching is working, the static data still refetches on every refresh.
