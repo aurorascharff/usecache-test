@@ -25,14 +25,6 @@ When deployed to Vercel at [https://my-app-2-xi.vercel.app/123](https://my-app-2
 
 Interestingly, the network tab shows cache-related headers indicating the content should be cached:
 
-```http
-X-Vercel-Cache: HIT
-X-Nextjs-Stale-Time: 300
-X-Nextjs-Prerender: 1
-```
-
-- `X-Vercel-Cache: HIT` - Indicates a cache hit
-- `X-Nextjs-Prerender: 1` - Shows content was prerendered
-- `X-Nextjs-Stale-Time: 300` - Cache stale time configuration
+![Network Headers](https://user-images.githubusercontent.com/your-username/headers-screenshot.png)
 
 Despite these headers suggesting caching is working, the static data still refetches on every refresh.
