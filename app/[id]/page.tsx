@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getDynamicData, getStaticData } from "../../data";
+import { cacheLife } from "next/dist/server/use-cache/cache-life";
 
 export default async function Page({
   params,
@@ -51,6 +52,7 @@ async function StaticData({
   id: string;
 }) {
   "use cache";
+  cacheLife("max");
   const data = await getStaticData(id);
 
   return (
