@@ -1,7 +1,4 @@
-# Next.js C## Summary
-
-- **Production Build** (`npm run build` + `npm run start`): ✅ Static data cached correctly (does not refetch on refresh)
-- **Vercel Deployment** ([live site](https://my-app-2-xi.vercel.app/123)): ❌ Static data cache not working (refetches on every refresh)or Demonstration
+# Next.js Cache Behavior Demonstration
 
 This project demonstrates a difference in caching behavior between local development and deployed environments when using `"use cache"` directive with `cacheLife("max")`.
 
@@ -14,7 +11,7 @@ The application has:
 
 ## Expected Behavior (Production Build)
 
-In development (`localhost:3000`), the static data is properly cached and does **not** rerun when you refresh the page:
+When running a production build locally (`npm run build` then `npm run start`), the static data is properly cached and does **not** rerun when you refresh the page:
 
 ![Local Development - Static data cached correctly](local.gif)
 
