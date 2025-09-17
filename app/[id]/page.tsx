@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getDynamicData, getStaticData } from "../../data";
 
 export default async function Page({
@@ -8,9 +9,15 @@ export default async function Page({
   const id = (await params).id;
 
   return (
-    <StaticData id={id}>
-      <DynamicData id={id} />
-    </StaticData>
+    <Suspense fallback={<div className="p-8">Loading cached content...</div>}>
+      <StaticData id={id}>
+        <Suspense
+          fallback={<div className="p-8">Loading dynamic content...</div>}
+        >
+          <DynamicData id={id} />
+        </Suspense>
+      </StaticData>
+    </Suspense>
   );
 }
 
