@@ -51,7 +51,7 @@ async function StaticData({
   children: React.ReactNode;
   id: string;
 }) {
-  "use cache";
+  "use cache: remote";
   cacheLife("max");
   const data = await getStaticData(id);
 
